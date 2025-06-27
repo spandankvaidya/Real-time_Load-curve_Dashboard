@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Power Forecast</title>
+  <link rel="stylesheet" href="style_5.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+
+<header>
+  <h1>⚡ Real-Time Power Forecast Dashboard</h1>
+</header>
+
+<main id="main-area">
+  <div id="wallpaper" class="fade-in"></div>
+  <iframe id="dashboard-frame" src="" frameborder="0" class="hidden"></iframe>
+  <div id="date-block" class="hidden"></div>
+</main>
+
+<footer>
+  <button id="startBtn">Start Test</button>
+</footer>
+
+<div id="chatbot-icon"><img src="icon.jpg" alt="Chatbot Icon"/></div>
+
+<div id="chatbot-dialog" class="visible">
+  <div class="chatbox-content">
+    <p>
+      Hello! This is a real-time power forecaster. After you click 'Start Test', you will select a test date...
+    </p>
+    <button id="readyBtn">Ready!</button>
+  </div>
+</div>
+
+<!-- Date Picker Modal -->
+<div id="calendar-modal" class="hidden">
+  <div class="modal-content">
+    <h3>Select a Test Date</h3>
+
+    <!-- Legend -->
+    <div id="date-picker-legend">
+      <div class="legend-item"><div class="legend-color training"></div><span>Training dates</span></div>
+      <div class="legend-item"><div class="legend-color validation"></div><span>Validation dates</span></div>
+      <div class="legend-item"><div class="legend-color test-date"></div><span>Test dates</span></div>
+    </div>
+
+    <!-- Calendar input -->
+    <input id="datePicker" type="text" placeholder="Select test date"/>
+
+    <!-- Buttons -->
+    <div style="margin-top: 16px;">
+      <button id="confirmDateBtn" disabled>Confirm Date</button>
+      <button id="closeDatePicker">Close</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="script_5.js"></script>
+</body>
+</html>
